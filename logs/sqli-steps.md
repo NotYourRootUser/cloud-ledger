@@ -1,0 +1,2 @@
+Step 1 — Use parameterized queries / prepared statements so user input is treated as data, preventing injected SQL from executing.
+Step 2 — Enforce least-privilege DB accounts and input allowlisting/validation.
