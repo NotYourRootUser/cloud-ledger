@@ -15,7 +15,7 @@ Right now my main focus is **CompTIA Security+** and **AWS Solutions Architect A
 - [Week 2 — Firewalls, VPN, IDS/IPS](notes/week2/README.md)
 
 ## Labs
-- [Week 2 Logs](./logs/DVWA%20lab/) → screenshots, configs, applied labs
+- [Week 1 - DVWA Lab](./logs/DVWA%20lab/) → screenshots, configs, applied labs
 
 ---
 
