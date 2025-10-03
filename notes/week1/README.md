@@ -8,7 +8,7 @@
 - **DoS/DDoS:** Overload service with traffic.  
 - **Vuln Scanning:** Identify weak points (e.g., with Nmap).  
 
-## Artifacts
+## Notes
 - [MITM notes](MITM.md)  
 - [SQLi notes](SQLi.md)  
 - [XSS notes](XSS.md)  
