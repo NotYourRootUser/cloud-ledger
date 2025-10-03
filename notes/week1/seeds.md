@@ -1,63 +1,46 @@
-# Network & Web Attack Notes
+# Network & Web Attack Notes (Humanized)
 
-## MITM — Man-in-the-Middle
-**Definition**  
-Interception of communication between two parties that allows an attacker to read and/or modify traffic.
-
-**Analogy**  
-Imagine two people having a conversation and someone sits between them — either actively changing what they say (active) or just listening in (passive).
-
-**Visual (ASCII)**  
+## MITM (Man-in-the-Middle)
+This is when an attacker slips between two people who are communicating. They can just listen quietly (passive) or actually change what’s being said (active).  
+Visualize it like:  
 `Party ===== Attacker ===== Party`
 
 ---
 
-## SQLi — SQL Injection
-**Definition**  
-Injection of malicious SQL into an application's input or query so the database executes unintended commands, allowing data to be read, modified, or deleted.
+## SQL Injection (SQLi)
+Here, the attacker puts malicious SQL into an input field. If the app doesn’t handle it properly, the database runs those commands. That means the attacker can read, change, or delete data.  
 
-**Mitigation**  
-- Use parameterized queries / prepared statements so user input is treated strictly as data (never concatenate user input into SQL).
-- Apply least-privilege database accounts and input allowlists/validation.
+**How to stop it:** use parameterized queries or prepared statements so user input is always treated as plain data, not part of the SQL command.  
 
-**Detection**  
-- Monitor DB query logs and WAF/IDS alerts for anomalous or SQL-like payloads and error patterns (e.g., `' OR '1'='1'`, `UNION SELECT`, unexpected syntax errors).
+**How to catch it:** keep an eye on DB query logs and WAF/IDS alerts for weird SQL-looking payloads (like `' OR '1'='1'` or `UNION SELECT`) or strange error patterns.
 
 ---
 
-## XSS — Cross-Site Scripting
-**Definition**  
-Injection of malicious scripts into web pages viewed by users, allowing attackers to run code in the victim’s browser (cookie theft, DOM manipulation, session hijack).
+## Cross-Site Scripting (XSS)
+This is when someone injects malicious scripts into a web page so that the code runs in the victim’s browser. That can steal cookies, mess with the DOM, or hijack sessions.  
 
-**Mitigation**  
-- Sanitize and contextually encode user input/output (HTML, attribute, JS, URL contexts).
-- Implement Content Security Policy (CSP).
-- Mark cookies `HttpOnly` and `Secure`.
+**Fix:** sanitize and encode all user input/output, use Content Security Policy (CSP), and set cookies with `HttpOnly` and `Secure`.  
 
-**Detection**  
-- Monitor IDS/WAF logs for suspicious `<script>` tags or unusual parameter values in HTTP requests.
-- Watch for client-side errors or anomalous referrer patterns.
+**Catch:** monitor IDS/WAF logs for `<script>` tags or unusual parameters in requests, and look for odd browser errors or referrers.
 
 ---
 
-## DoS / DDoS — Denial of Service
-**Definition**  
-Attacks that overwhelm a target’s resources or network with traffic to deny service to legitimate users.  
-- **DoS** = single source.  
-- **DDoS** = many distributed sources.
+## DoS / DDoS
+A denial-of-service attack just overwhelms a system with traffic.  
+- **DoS** comes from one source.  
+- **DDoS** comes from many sources at once.  
+The result: real users can’t get service.
 
 ---
 
-## Vulnerability Scan
-**Definition**  
-Automated scanning of systems, applications, or networks to identify known weaknesses, misconfigurations, or missing patches.
+## Vulnerability Scanning
+These are automated scans that check systems, apps, or networks for known issues, misconfigs, or missing patches.  
 
-**Types**  
-- **Credentialed scan:** uses valid credentials for a deeper view of system/configuration.  
-- **Non-credentialed scan:** no credentials; limited to external surface.
+Two types:  
+- **Credentialed scan** — uses valid logins, digs deep into configs.  
+- **Non-credentialed scan** — no logins, so it only sees the surface (external view).
 
 ---
 
 ## Buffer Overflow
-**Definition**  
-An attack that sends more data to a memory buffer than it can hold, causing crashes or potentially allowing an attacker to execute arbitrary code.
+This happens when a program is sent more data than a memory buffer can hold. The overflow can crash the app or let an attacker run their own code.
