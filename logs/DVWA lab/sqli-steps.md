@@ -1,2 +1,3 @@
-Step 1 — Use parameterized queries / prepared statements so user input is treated as data, preventing injected SQL from executing.
-Step 2 — Enforce least-privilege DB accounts and input allowlisting/validation.
+Step 1 — Navigated to DVWA → SQL Injection.
+Step 2 — Tried payload: 1' OR '1'='1' -- (syntax error).
+Step 3 — Successful payload: 1' OR '1'='1' # ; observed DB output / all users returned.

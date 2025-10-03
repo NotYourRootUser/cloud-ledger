@@ -1,0 +1,22 @@
+services:
+  db:
+    image: mysql:5.7
+    platform: "linux/amd64"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dvwa
+      MYSQL_USER: dvwa
+      MYSQL_PASSWORD: dvwa
+    volumes:
+      - db_data:/var/lib/mysql
+
+  dvwa:
+    image: vulnerables/web-dvwa
+    platform: "linux/amd64"
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+
+volumes:
+  db_data:
