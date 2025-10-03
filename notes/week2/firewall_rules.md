@@ -1,5 +1,4 @@
 **Firewall ACL Rules**
-
 - Allow HTTPS (443) inbound to web server only
 ACL that permits TCP 443 to 10.0.1.10 from anywhere, denies everything else.
 
@@ -8,3 +7,7 @@ ACL that permits TCP 22 to 10.0.1.10, but only from 192.168.50.0/24.
 
 - Deny all ICMP (ping) traffic
 ACL that drops ICMP packets globally.
+
+**VPN Config Snippet**
+- Config snippet for full vpn 
+redirect-gateway or push "redirect-gateway def1"   # OpenVPN style

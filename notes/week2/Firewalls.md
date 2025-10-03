@@ -38,4 +38,4 @@
 - **Plain-language analogy** → A firewall is the **gatekeeper at the door**, checking IDs (IP/port) before letting anyone in.  
 
 ### Diagram
-![Firewall/VPN/IDS Diagram](./diagrams/firewall_vpn_ids.png)
+![Firewall Types](diagrams/firewall_types.png)  

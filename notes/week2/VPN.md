@@ -34,5 +34,10 @@
 - VPN tunnel = secret underground passage → people see cars enter/exit, but can’t look inside.
 - Full vs Split = using the tunnel for everything (full) vs only work errands (split).
 
+## VPN Types
+
+… your explanations …
+
 ### Diagram
-![Firewall/VPN/IDS Diagram](./diagrams/firewall_vpn_ids.png)
+![VPN (Full vs Split)](diagrams/vpn_full_vs_split.png)
+

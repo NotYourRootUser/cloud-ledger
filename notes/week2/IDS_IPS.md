@@ -35,4 +35,4 @@
 - IPS = guard dog → barks *and* bites intruder.
 
 ### Diagram
-![Firewall/VPN/IDS Diagram](./diagrams/firewall_vpn_ids.png)
+![IDS vs IPS](diagrams/ids_vs_ips.png)
