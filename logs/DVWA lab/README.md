@@ -1,25 +1,27 @@
-# Week 1 — DVWA Lab (SQLi & Reflected XSS)
+# Week 1 — DVWA Lab: SQLi & XSS
 
-**Quick note**  
-Ran a local DVWA lab to confirm two common web vulnerabilities: **SQL Injection (SQLi)** and **Reflected XSS**. Steps, screenshots and brief notes are included in the repo.
+**What I did:**  
+Ran a small DVWA lab to test two common web bugs — **SQL Injection (SQLi)** and **Reflected XSS**.  
+I did this to try and understand how these attacks work and how they look in action. Notes, steps, and screenshots are all in this repo.
 
-## Quick setup
-1. Start DVWA (Docker or XAMPP).  
-2. Open `http://localhost:8080/` and log in with `admin` / `password`.  
-3. Click **Setup / Reset DB** and set **DVWA Security = Low**.
+## Setup
+1. Started DVWA using Docker.  
+2. Went to `http://localhost:8080/` and logged in with `admin` / `password`.  
+3. Clicked **Setup / Reset DB** and set the security level to **Low**.
 
-## What I demonstrated
-- **SQLi:** Injected a payload that returned user rows from the database (app passed untrusted input to the DB).  
+## What I proved
+- **SQLi:** I used a payload that made the site show user rows from the database, meaning it didn’t handle the input safely.  
   ![SQLi screenshot](sqli-screenshot.png)
 
-- **Reflected XSS:** Submitted a small script that was reflected back and executed in the page (output not escaped).  
+- **Reflected XSS:** I injected a script that got sent back and ran in the browser. The site didn’t escape the input properly.  
   ![XSS screenshot](xss-screenshot.png)
 
 ## Files / artifacts
-- [DVWA-checklist.md](DVWA-checklist.md) — setup checklist and verification steps.  
-- [sqli-steps.md](sqli-steps.md) — payloads and commands used for SQLi.  
-- [xss-steps.md](xss-steps.md) — exact steps for triggering the XSS.  
-- [compression.md](compression.md) — short summary, suggested fixes, and test notes.
+- [DVWA-checklist.md](DVWA-checklist.md) — setup steps and quick checks.  
+- [sqli-steps.md](sqli-steps.md) — the SQLi payloads and what I tried.  
+- [xss-steps.md](xss-steps.md) — notes on the XSS test.  
+- [compression.md](compression.md) — short summary and how to fix it.  
 
-## Short takeaway / next step
-Both issues were reproducible on **Low** security. Next action: implement fixes (use parameterized queries and output encoding) and re-test to confirm the vulnerabilities are closed.
+## Short takeaway and the next step
+Both bugs worked on **Low** security.  
+Next I’ll try adding simple fixes — **parameterized queries** for SQLi and **output encoding** for XSS — then re-test to see if they’re patched.
