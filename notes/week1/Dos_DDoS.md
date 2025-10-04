@@ -1,6 +1,6 @@
 # DoS / DDoS Notes (Security+)
 
-- **What it is:** Attack that overwhelms resources. DoS = single source, DDoS = many sources (botnet).
+- **What it is:** Attack that overwhelms resources. DoS = single source, DDoS = many sources (botnet)
 
 ## Common Types
 - SYN flood → incomplete TCP handshakes.
