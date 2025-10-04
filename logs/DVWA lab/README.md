@@ -9,12 +9,18 @@ I did this to try and understand how these attacks work and how they look in act
 2. Went to `http://localhost:8080/` and logged in with `admin` / `password`.  
 3. Clicked **Setup / Reset DB** and set the security level to **Low**.
 
+---
+
 ## What I proved
 - **SQLi:** I used a payload that made the site show user rows from the database, meaning it didn’t handle the input safely.  
   ![SQLi screenshot](sqli-screenshot.png)
 
+---
+
 - **Reflected XSS:** I injected a script that got sent back and ran in the browser. The site didn’t escape the input properly.  
   ![XSS screenshot](xss-screenshot.png)
+
+---
 
 ## Files 
 - [DVWA-checklist.md](DVWA-checklist.md) — setup steps and quick checks.  
