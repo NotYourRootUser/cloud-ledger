@@ -1,41 +1,33 @@
-# Firewall — Security+ Exam Recall Core
+# Firewall Notes (Security+)
 
-## Purpose
-- Acts as the **first line of defense** between networks.  
-- Controls traffic based on **IP address, port, and protocol**.  
+- **What it is:** Packet-filtering device or service that enforces network traffic rules by IP, port, and protocol. Acts as a choke point between networks.
 
 ## Types
-- **Stateless Firewall**    
-  - Examines each packet individually.  
-  - Doesn’t remember prior traffic.  
-- **Stateful Firewall**  
-  - Tracks full sessions.  
-  - Knows if packets belong to an existing, legitimate connection.  
+- Stateless (packet filter) → examines each packet individually.
+- Stateful → tracks connection state (sessions).
+- Next-Gen Firewall (NGFW) → application-level inspection, IDS/IPS integration.
+- Web Application Firewall (WAF) → application-layer (Layer 7) protection for web apps.
 
-## Rules
-- **ACLs (Access Control Lists):** Define allow/deny actions by IP, port, and protocol.  
-- Example:  
-  - Deny TCP 23 (Telnet)  
-  - Allow TCP 22 (SSH)  
+## Detection / How issues show up
+- Logs showing blocked/allowed rules and repeated denies.
+- Unexpected drops of required ports/services.
+- Alerts from SIEM when rule hits spike.
+- Application errors if WAF blocks legitimate payloads.
 
-## Placement
-- Typically deployed at the **network perimeter** or between internal segments.  
-- a **Web Application Firewall** (WAF) operates at **Layer 7** and can filter on **application-layer content (e.g., SQLi, XSS).**
+## CIA Impact
+- **Availability:** Medium (misconfig can block legit users).
+- **Confidentiality / Integrity:** Medium (filters can prevent attacks that affect CIA).
 
-## Limitations
-- Cannot inspect encrypted traffic contents.  
-- Cannot block application-layer attacks (SQLi, XSS, CSRF → handled by WAF).  
+## Practical mitigations / Best practice
+- Apply default-deny (deny all, allow specific).
+- Use layered rules (network ACLs + SGs + firewall).
+- Keep rule sets minimal, documented, and reviewed regularly.
+- Use NGFW for app-layer context + integrate with IDS/IPS.
+- Test rule changes in a staging window; use logging and monitoring.
 
-## Blue Team Filter
-- **Contain** → Firewalls block/contain unauthorized traffic before it spreads into the internal LAN.  
+## One representative tool/service
+- **pfSense / Cisco ASA / Palo Alto NGFW** for on-prem.  
+- **WAF:** ModSecurity, AWS WAF for web apps.
 
----
-
-## Exam Recall Anchors
-- **Stateful vs Stateless?** → Stateful = tracks sessions; Stateless = packet only.  
-- **Which port/service to block?** → Know common ports (Telnet 23, SSH 22, HTTP 80, HTTPS 443).  
-- **What defense function is it?** → Contain.  
-- **Plain-language analogy** → A firewall is the **gatekeeper at the door**, checking IDs (IP/port) before letting anyone in.  
-
-### Diagram
-![Firewall Types](diagrams/firewall_types.png)  
+## Quick analogy
+- Firewall = bouncer at the club door: checks who’s allowed by the rules and keeps troublemakers out.

@@ -1,43 +1,32 @@
 # VPN Notes (Security+)
 
-- VPN = Virtual Private Network → encrypted tunnel across untrusted network (e.g., internet).  
-- Protects confidentiality (hides traffic) + integrity (prevents tampering).
+- **What it is:** Virtual Private Network — creates an encrypted tunnel across an untrusted network so remote endpoints can communicate securely.
 
-## Types
-- Remote Access VPN → user connects from home/travel into corp network.  
-- Site-to-Site VPN → whole networks connected securely (branch office ↔ HQ).
+## Types / Protocols recap
+- Remote Access vs Site-to-Site.
+- Protocols: IPSec (ESP/AH), IKEv2, SSL/TLS VPNs, L2TP/IPSec.
+- Tunnel types: Full vs Split.
 
-## Protocols
-- IPSec
-  - AH = integrity only (rare).
-  - ESP = encryption + integrity (main one).
-- SSL/TLS VPN → runs in browser, flexible for remote users.
-- L2TP/IPSec → older, still around.
-- IKEv2/IPSec → stable, used a lot on mobile.
+## Detection / How issues show up
+- User reports of failed connections or cert errors.
+- VPN logs showing repeated auth failures or sudden session drops.
+- IDS alerts for unexpected VPN traffic patterns or anomalous source IPs.
+- Increased latency or resource issues at gateway (overloaded concentrator).
 
-## Full vs Split Tunnel
-- Full Tunnel → all traffic forced through VPN (safer, but slower).
-- Split Tunnel → only corp traffic uses VPN; internet direct (faster, but less secure).
+## CIA Impact
+- **Confidentiality:** High (protects data in transit).
+- **Integrity:** High (ensures data not tampered on the wire).
+- **Availability:** Medium (gateway outage or overloaded VPN can prevent access).
 
-## Auth
-- MFA common (password + token/app).
-- Can use digital certs to trust devices.
+## Practical mitigations / Best practice
+- Enforce strong authentication (MFA + certificates).
+- Prefer full-tunnel where sensitive traffic must be protected; consider split-tunnel risks.
+- Use up-to-date protocols (IKEv2/IPSec or TLS-based) and strong ciphers.
+- Limit access by policy (least privilege, network segmentation).
+- Monitor VPN logs, session lengths, and concurrent sessions; patch concentrators/gateways.
 
-## Strengths / Weaknesses
-- + Strong encryption, blocks sniffing.
-- + Good for public Wi-Fi use.
-- – Split tunnel can leak data.
-- – VPN gateways = single points of failure.
-- – Misconfigs = open doors.
+## One representative tool/service
+- **OpenVPN / Cisco AnyConnect / AWS Client VPN** (know names and purpose).
 
-## Analogies
-- VPN tunnel = secret underground passage → people see cars enter/exit, but can’t look inside.
-- Full vs Split = using the tunnel for everything (full) vs only work errands (split).
-
-## VPN Types
-
-… your explanations …
-
-### Diagram
-![VPN (Full vs Split)](diagrams/vpn_full_vs_split.png)
-
+## Quick analogy
+- VPN = private train tunnel through a rough area — traffic inside the train is hidden from outside observers.

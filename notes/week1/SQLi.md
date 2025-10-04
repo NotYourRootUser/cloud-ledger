@@ -1,5 +1,32 @@
-Here, the attacker puts malicious SQL into an input field. If the app doesn’t handle it properly, the database runs those commands. That means the attacker can read, change, or delete data.  
+# SQL Injection (SQLi) Notes (Security+)
 
-**How to stop it:** use parameterized queries or prepared statements so user input is always treated as plain data, not part of the SQL command.  
+- **What it is:** Attacker injects SQL into app input, database executes it. Can expose, alter, or delete data.
 
-**How to catch it:** keep an eye on DB query logs and WAF/IDS alerts for weird SQL-looking payloads (like `' OR '1'='1'` or `UNION SELECT`) or strange error patterns.
+## Detection
+- App shows DB errors/stack traces.
+- Query returns too many rows.
+- WAF/IDS alerts (payloads like `' OR '1'='1`).
+- DB logs show odd queries.
+
+## CIA Impact
+- **Confidentiality:** High
+- **Integrity:** High
+- **Availability:** Medium
+
+## Common Causes
+- Concatenating user input into SQL.
+- No input validation/escaping.
+- Over-privileged DB accounts.
+
+## Mitigation
+- Parameterized queries / prepared statements.
+- Input validation (whitelists).
+- Least privilege DB permissions.
+- WAF signatures.
+- Monitor query logs.
+
+## Tool
+- sqlmap (scanner/exploit).
+
+## Analogy
+- Like slipping extra instructions on a restaurant order — chef executes blindly unless menu IDs are enforced.

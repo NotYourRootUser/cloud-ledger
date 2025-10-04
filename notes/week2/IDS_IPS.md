@@ -1,38 +1,32 @@
 # IDS / IPS Notes (Security+)
 
-- IDS = Intrusion Detection System → monitors traffic, detects suspicious activity.  
-- IPS = Intrusion Prevention System → monitors traffic AND can block/stop it.
-
-## Key Difference
-- IDS = alert only (out-of-band, passive).  
-- IPS = can drop/block (in-line, active).  
-- Think: IDS = security camera; IPS = security guard who can step in.
+- **What it is:** Systems that detect (IDS) and optionally block (IPS) malicious activity by inspecting traffic or host activity.
 
 ## Types
-- NIDS = Network-based IDS → sits on network, monitors traffic (like a tap/span port).  
-- HIDS = Host-based IDS → runs on a single machine, watches logs + processes.
+- NIDS (Network-based) vs HIDS (Host-based).
+- Detection methods: signature-based vs anomaly/behavior-based.
+- Placement: IDS typically out-of-band; IPS inline.
 
-## Detection Methods
-- Signature-based → matches known attack patterns (fast, but misses new/unknown).  
-- Anomaly/Behavior-based → flags deviations from baseline (good for zero-day, but can cause false positives).
+## Detection / How issues show up
+- IDS alerts for known signatures or anomaly thresholds.
+- High false-positive rates that require tuning.
+- IPS logs showing dropped connections or blocked IPs.
+- SIEM correlates IDS/IPS alerts with other telemetry for triage.
 
-## Placement
-- IDS usually off to the side (out-of-band) → can’t slow traffic.  
-- IPS sits inline (between firewall + network) → can actively drop malicious packets.
+## CIA Impact
+- **Availability:** Medium (IPS can block legit traffic if misconfigured).
+- **Confidentiality/Integrity:** Medium (detects/prevents attacks that would impact CIA).
 
-## Strengths / Weaknesses
-- IDS  
-  + Good visibility/alerting.  
-  – Can’t stop attack directly.  
+## Practical mitigations / Best practice
+- Tune signatures and baselines to reduce false positives.
+- Use layered detection (HIDS + NIDS + endpoint AV + EDR).
+- Place inline IPS carefully (fail-open vs fail-closed decision).
+- Regularly update signature feeds and maintain a tuning/exception process.
+- Integrate alerts with SIEM and incident response playbooks.
 
-- IPS  
-  + Can block in real-time.  
-  – Risk of false positives blocking legit traffic.  
-  – Must be carefully tuned (trade-off: security vs availability).
+## One representative tool
+- **Snort / Suricata / OSSEC (HIDS)** for detection; vendors like Palo Alto and Cisco have integrated IPS features.
 
-## Analogies
-- IDS = motion sensor → beeps if intruder detected.  
-- IPS = guard dog → barks *and* bites intruder.
-
-### Diagram
-![IDS vs IPS](diagrams/ids_vs_ips.png)
+## Quick analogy
+- IDS = CCTV camera that records and alerts security.  
+- IPS = the camera plus a guard who can step in and stop the attacker.
