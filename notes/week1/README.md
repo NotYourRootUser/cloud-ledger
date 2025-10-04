@@ -13,5 +13,5 @@
 - [SQLi notes](SQLi.md)  
 - [XSS notes](XSS.md)  
 - [Buffer Overflow notes](BufferOverflow.md)  
-- [DoS/DDoS notes](DoS_DDoS.md)  
+- [DoS/DDoS notes](Dos_DDoS.md)  
 - [Vulnerability Scanning notes](VulnScan.md)
