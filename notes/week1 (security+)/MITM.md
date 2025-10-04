@@ -19,7 +19,7 @@
 - Enable Dynamic ARP Inspection (DAI) on managed switches.
 - Configure switch port security (sticky MACs, max-MAC, shutdown).
 - Implement Network Access Control (NAC) to approve endpoints.
-- Implement IDS/IPS and behavior analytics for early detection.
+- Implement IDS/IPS and behavior analytics for early detection
 - Apply WAF for application-layer protection where relevant.
 - Harden TLS (disable weak ciphers, enforce TLS1.2+/PFS).
 - Use secure DNS (DNS over TLS/HTTPS) to avoid DNS manipulation.
