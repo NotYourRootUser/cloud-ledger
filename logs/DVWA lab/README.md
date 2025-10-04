@@ -16,7 +16,7 @@ I did this to try and understand how these attacks work and how they look in act
 - **Reflected XSS:** I injected a script that got sent back and ran in the browser. The site didn’t escape the input properly.  
   ![XSS screenshot](xss-screenshot.png)
 
-## Files / artifacts
+## Files 
 - [DVWA-checklist.md](DVWA-checklist.md) — setup steps and quick checks.  
 - [sqli-steps.md](sqli-steps.md) — the SQLi payloads and what I tried.  
 - [xss-steps.md](xss-steps.md) — notes on the XSS test.  
