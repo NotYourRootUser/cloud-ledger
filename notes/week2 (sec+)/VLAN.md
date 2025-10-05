@@ -1,11 +1,17 @@
 # VLAN Notes (Security+)
 
+- **VLANs** operate at **Layer 2 (Data Link)** but influence Layer 3 routing when used with inter-VLAN routing or Layer 3 switches.
+
 - **What it is:** Virtual LAN — logical segmentation of a switch/network into separate broadcast domains without requiring separate physical hardware.
 
 ## Use cases
 - Separate user groups (HR, Finance, Guests).
 - Isolate servers, IoT devices, and management networks.
 - Limit broadcast domains and reduce attack surface.
+
+## Common Attacks
+- VLAN hopping (double tagging, switch spoofing)
+- Misconfigured trunk ports exposing sensitive VLANs
 
 ## Detection / How issues show up
 - Unexpected traffic crossing VLANs (misconfig or trunking issues).
@@ -15,9 +21,9 @@
 
 ## CIA Impact
 - **Confidentiality:** High (segmentation prevents lateral movement).
-- **Availability:** Medium (misconfiguration can cut off services).
 - **Integrity:** Medium (keeps attacker containment constrained).
-
+- **Availability:** Medium (misconfiguration can cut off services).
+x       
 ## Practical mitigations / Best practice
 - Use access control lists and firewalling between VLANs (strong east-west controls).
 - Disable unused switch ports; use port security and mac limiting.
