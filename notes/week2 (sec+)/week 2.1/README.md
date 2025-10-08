@@ -2,7 +2,7 @@
 
 ## Overview
 This week I focused on fixing my understanding of how firewalls, VPNs, and network flow actually work together.  
-I went back through my Security+ notes and AWS networking labs to make sure I really understood what traffic should be allowed, blocked, or routed through.
+I went back through my Security+ notes and AWS networking labs to make sure I really understood what traffic should be allowed, blocked, or routed through. Hence week 2.1, week 2 revamped to fully understand.
 
 ---
 
