@@ -17,7 +17,7 @@ Current focus: **CompTIA Security+** and **AWS Solutions Architect Associate**
 
 ## Weekly Maps
 
-- [**Week 1 — Attacks & Vulnerabilities**](notes/week1)  
+- [**Week 1 — Attacks & Vulnerabilities**](./notes/week1%20(sec+)/)  
   Focus → MITM · SQLi · XSS · DoS · Buffer Overflow
 
 - [**Week 2 — Firewalls / VPN / IDS & IPS**](notes/week2%20(sec+)/)  
@@ -37,7 +37,3 @@ Current focus: **CompTIA Security+** and **AWS Solutions Architect Associate**
 ## Compression Anchor
 > “Flow before firewall.” — Every diagram starts with traffic paths.
 
----
-
-### © Justin Uaisela · 2025  
-Cloud Security Engineer in Training | Mission Ready · Security+ · AWS Track
