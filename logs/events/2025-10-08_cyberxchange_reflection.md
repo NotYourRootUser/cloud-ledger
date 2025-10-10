@@ -12,5 +12,4 @@
 - Add “AI risk matrix” stub to notes.
 
 ## Artifacts
-- Notes taken: Apple
-EOF
+- Notes taken: Phone
