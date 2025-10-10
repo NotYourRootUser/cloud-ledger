@@ -1,50 +1,57 @@
-# Week 2.1 — Firewall & Network Flow Fixups
+# Week 2.1 — Firewall, Network Flow & Defense-in-Depth Integration
 
 ## Overview
-This week I focused on fixing my understanding of how firewalls, VPNs, and network flow actually work together.  
-I went back through my Security+ notes and AWS networking labs to make sure I really understood what traffic should be allowed, blocked, or routed through. Hence week 2.1, week 2 revamped to fully understand.
+Week 2.1 focused on fixing my understanding of how traffic truly flows across network devices, from the Internet edge to internal subnets.  
+I rebuilt my notes and PBQs around rule order, segmentation, and secure flow design, then capped the week with a **Defense-in-Depth × Zero-Trust** compression artifact to unify every control layer.
 
 ---
 
 ## Main Topics
-- **DMZ Rules** → How inbound and outbound traffic gets separated with two firewalls.  
-- **ACL Order** → Rules are checked from top to bottom, and the first match decides what happens.  
-- **VPN (IKEv2)** → Learned how secure tunnels are built in two phases (authentication + data).  
-- **Security Groups vs NACLs** → SGs are stateful, NACLs are stateless — both used for different layers.  
-- **VLAN & Subnetting** → How logical networks (VLANs) connect to subnets in a VPC.  
-- **NAT vs IGW** → Why private networks need NAT to reach the internet safely.
+| Focus | Outcome |
+|-------|----------|
+| **DMZ Rules** | Separated inbound vs outbound traffic with dual firewalls. |
+| **ACL Order** | Reinforced “top-to-bottom → first match wins.” |
+| **VPN (IKEv2)** | Understood Phase 1 (authentication) + Phase 2 (data tunnel). |
+| **Security Groups vs NACLs** | SG = stateful, NACL = stateless → used for different tiers. |
+| **VLAN & Subnetting** | Mapped logical network isolation inside a VPC. |
+| **NAT vs IGW** | Why private networks need NAT to reach Internet safely. |
+| **Load Balancers & Proxies** | Compared L4 vs L7 + Forward/Reverse flows. |
+| **Defense-in-Depth / Zero-Trust** | Combined all devices into one layered secure architecture. |
 
 ---
 
 ## Files in This Folder
 | File | Description |
-|:--|:--|
-| `dmz_rule_table.md` | Notes on inbound/outbound firewall rules in a DMZ. |
-| `firewall_pbq_fix.md` | Fixed a firewall PBQ where rules were in the wrong order. |
-| `ids_ips_waf_onepager.md` | Quick summary of IDS, IPS, and WAF differences. |
-| `ikev2_notes.md` | What happens during Phase 1 and Phase 2 of IKEv2. |
-| `nat_igw_chart.md` | Side-by-side comparison of NAT vs Internet Gateway. |
-| `sg_vs_nacl_quick.md` | Easy table for remembering SG vs NACL behavior. |
-| `vlan_subnet_matrix.md` | VLAN vs subnet comparison + diagram notes. |
+|------|--------------|
+| `dmz_rule_table.md` | Inbound/outbound firewall rules for DMZ placement. |
+| `firewall_pbq_fix.md` | Fixed rule-order logic errors from previous PBQ. |
+| `ikev2_notes.md` | Breakdown of IKEv2 Phase 1 & Phase 2. |
+| `ids_ips_waf_onepager.md` | Summary of IDS vs IPS vs WAF. |
+| `nat_igw_chart.md` | NAT vs Internet Gateway comparison. |
+| `sg_vs_nacl_quick.md` | Fast recall table for SG vs NACL behavior. |
+| `vlan_subnet_matrix.md` | VLAN vs Subnet mapping + diagram. |
+| `lb_proxies.md` | L4/L7 load balancers + Forward/Reverse proxy notes. |
+| `defense_in_depth.md` | Final compression artifact → Defense-in-Depth × Zero-Trust. |
 
 ---
 
 ## What I Learned
-- Firewalls don’t just “block or allow” — the order of rules actually matters a lot.  
-- A DMZ isn’t just a buzzword; it’s a real buffer zone between public and private networks.  
-- VPNs use ports like 500, 4500, and 1701 — each step in IKEv2 has a purpose.  
-- Drawing network flow diagrams helped me see the logic visually instead of just memorizing.
+- Rule order matters as much as rule logic.  
+- DMZs are real isolation buffers, not just theory.  
+- VPN phases separate auth vs encryption responsibilities.  
+- Load balancers + proxies control *how* and *where* traffic moves.  
+- The entire system only makes sense once viewed as **layered verification gates** (Defense-in-Depth).  
 
 ---
 
 ## Anchor Quote
-> “Only Web ↔ DB; Internet ↛ DB.”  
-> Everything in the flow should have a reason to connect.
+> “Only Web ↔ DB; Internet → DMZ → DB. Every connection should have a reason to exist.”
 
 ---
 
 ## Next Up
-- Practice more AWS VPC builds with proper subnets and gateways.  
-- Try a small lab tracing traffic from Internet → Web → DB.  
-- Review Security+ PBQs on firewall and ACL logic under time pressure.
+- Practice additional AWS VPC builds using Security Groups + NACL combinations.  
+- Run a small lab tracing full flow: **Internet → WAF → ALB → App → DB.**  
+- Begin **Week 3 – Identity & Access Management (AAA / SSO / Federation)**.
 
+---
