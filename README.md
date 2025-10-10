@@ -15,7 +15,7 @@ Current focus: **CompTIA Security+** and **AWS Solutions Architect Associate**
 
 ---
 
-## Weekly Maps
+## Weekly Security+ Notes
 
 - [**Week 1 — Attacks & Vulnerabilities**](./notes/week1%20(sec+)/)  
   Focus → MITM · SQLi · XSS · DoS · Buffer Overflow
@@ -30,10 +30,12 @@ Current focus: **CompTIA Security+** and **AWS Solutions Architect Associate**
 
 ## Labs
 
-- [Week 1 – DVWA Lab](labs/week1) → screenshots · configs · applied labs
+- [Week 1 – DVWA Lab](./logs/DVWA%20lab/) → screenshots · configs · applied labs
+- [Week 2 – PBQ Sim Lab](./logs/PBQs/) → DMZ → VPN → VLAN → ACL fixups  
 
 ---
 
 ## Compression Anchor
 > “Flow before firewall.” — Every diagram starts with traffic paths.
+Every diagram starts with traffic paths — never with controls.
 
