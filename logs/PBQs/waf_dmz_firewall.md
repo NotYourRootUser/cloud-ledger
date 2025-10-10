@@ -1,5 +1,6 @@
-Q. A company hosts a public web server and a database. They want to prevent direct Internet access to the database and inspect for SQLi attacks on the web front end.
-- Describe the ideal setup using firewall, DMZ, and WAF — in one short paragraph.
+A company hosts a public web server and a database. They want to prevent direct Internet access to the database and inspect for SQLi attacks on the web front end.
+
+Q. Describe the ideal setup using firewall, DMZ, and WAF — in one short paragraph.
 
 A. Place the web server in the DMZ, separated from the internal LAN where the database lives. The firewall enforces that only the web server can reach the database on its port (e.g., 3306). A WAF sits in front of the web server to inspect and block SQLi/XSS before traffic reaches the app.
 
@@ -13,4 +14,4 @@ A. Place the web server in the DMZ, separated from the internal LAN where the da
 | **L7 (App)**      | DB Authentication        | Final layer of trust                 |
 
 
-📘 Artifact: [DMZ + WAF Diagram](./artifacts/diagram-dmz-waf.png)
+Diagram: [DMZ + WAF Diagram](./diagrams/diagram-dmz-waf.png)
