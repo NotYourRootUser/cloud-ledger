@@ -36,6 +36,6 @@ Current focus: **CompTIA Security+** and **AWS Solutions Architect Associate**
 ---
 
 ## Compression Anchor
-> “Flow before firewall.” — Every diagram starts with traffic paths.
-Every diagram starts with traffic paths — never with controls.
+> “Flow before firewall.” 
+- Every diagram starts with traffic paths, never with controls.
 
