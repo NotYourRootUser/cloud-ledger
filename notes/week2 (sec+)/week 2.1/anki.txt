@@ -1,0 +1,42 @@
+What is the main purpose of a bastion host (jump box)?	To provide a single hardened entry point for administrators to access private systems securely, isolating management traffic from the internet.
+Where should a bastion host be placed in a cloud network?	In a public subnet with strict inbound rules; it connects to private subnets that contain internal instances.
+Why use AWS SSM Session Manager instead of SSH?	It removes key management and direct network exposure, allowing audited, keyless, browser-based or CLI sessions.
+What’s the difference between a firewall and a WAF?	A firewall filters network packets by IP/port (Layer 3–4); a WAF filters HTTP/S traffic by content and behavior (Layer 7).
+Where is a DMZ placed in a typical network design?	Between the external and internal firewalls; it hosts public-facing services like web or mail servers.
+How does network segmentation improve security?	It limits lateral movement by isolating systems into VLANs or subnets with ACLs controlling traffic between them.
+What is the rule order in ACL evaluation?	Top-down; first match wins, so deny/allow order determines final traffic behavior.
+What’s the function of NAT in security architecture?	It hides internal IP addresses, translating private to public, reducing attack surface and enabling outbound access.
+What is a VPN used for?	To create an encrypted tunnel for secure remote access or site-to-site communication across untrusted networks.
+How do IDS and IPS differ?	IDS detects and alerts on suspicious traffic; IPS detects and automatically blocks or drops malicious traffic.
+Where should IDS/IPS be placed in a network?	IDS before the internal firewall for visibility; IPS inline between trusted zones to block real-time threats.
+What’s the key difference between Security Groups and NACLs in AWS?	Security Groups are stateful and instance-level; NACLs are stateless and subnet-level.
+How does a load balancer improve security and reliability?	It distributes traffic evenly, hides internal servers, and can integrate with WAF or TLS termination for protection.
+What is the purpose of a proxy server?	It intermediates requests, masking client identity, enforcing content policies, and caching traffic.
+What principle defines the Zero-Trust model?	Never trust, always verify — continuous authentication, authorization, and least-privilege enforcement.
+What is defense-in-depth?	Layering multiple security controls (technical, administrative, physical) to ensure no single point of failure.
+What AWS service can help centralize logging and monitoring of network traffic?	Amazon CloudWatch or GuardDuty integrated with VPC Flow Logs.
+Why deploy bastion hosts across multiple Availability Zones?	For high availability — if one AZ fails, another bastion remains accessible for admin operations.
+What’s the main benefit of disabling public IPs on private EC2 instances?	Prevents direct internet access, reducing exposure and forcing all access through secure gateways like bastions or VPNs.
+How do IAM policies reinforce architecture security?	They enforce least privilege and restrict who can modify or access network components.
+What is a common pitfall when configuring ACLs?	Placing an allow rule before a deny rule that should take precedence, unintentionally permitting unwanted traffic.
+What does “stateful” mean in firewall behavior?	It tracks connection states and automatically allows return traffic; stateless devices require explicit rules both ways.
+Why log administrative access on bastion hosts?	For accountability, audit trails, and incident response to detect unauthorized or risky activity.
+What is the difference between availability and redundancy?	Availability ensures continuous operation; redundancy provides backups or duplicates to support availability.
+Why is subnet isolation critical in multi-tier design?	It confines compromise to one layer (web, app, DB) and enforces control boundaries between trust zones.
+What’s the primary purpose of a DMZ firewall rule set?	To tightly control inbound access to public services and restrict outbound flow to internal networks.
+What architectural control enforces compartmentalization between tenants or environments?	Network segmentation using VLANs, VPCs, or micro-segmentation policies.
+What is the security risk of using shared jump boxes without proper IAM?	Loss of accountability and potential privilege escalation — sessions become untraceable.
+How does using an NLB in front of bastion hosts enhance resilience?	It provides fault tolerance, distributes SSH/RDP traffic, and ensures consistent access across AZs.
+Why combine VPN access with bastion hosts?	VPN provides encrypted tunnels; bastions add an extra layer of authentication and logging before private access.
+What layer do WAFs operate on in the OSI model?	Layer 7 (Application layer).
+What concept ensures users have only the access they need to perform their job?	Principle of least privilege.
+What is the benefit of infrastructure-as-code for security architecture?	Repeatable, version-controlled deployments that reduce misconfiguration risk.
+What is the advantage of using parameter stores for credentials?	Keeps secrets out of code and maintains encrypted, controlled access.
+How does a proxy cache improve both performance and security?	It serves cached content to reduce load while filtering or blocking malicious traffic patterns.
+What does a misconfigured ACL risk causing?	Accidental exposure of private resources or unintended service outages.
+Why monitor VPC Flow Logs?	To detect abnormal connections, troubleshoot traffic paths, and identify unauthorized access attempts.
+What’s the difference between a forward proxy and a reverse proxy?	Forward proxy sits before clients to control outbound access; reverse proxy sits before servers to manage inbound requests.
+How does encryption in transit differ from encryption at rest?	In transit protects data over the network; at rest protects stored data on disks or backups.
+Why is least privilege applied to security groups important?	Reduces attack surface by allowing only the minimal required ports and protocols.
+What is a jump host’s main audit advantage?	Centralizes all administrative access logs for analysis and compliance.
+Why are multi-AZ bastion deployments considered best practice?	They ensure continuous admin access even during AZ outages and meet high-availability requirements.
