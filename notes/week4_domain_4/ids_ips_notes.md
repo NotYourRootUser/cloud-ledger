@@ -1,12 +1,9 @@
 # IDS vs IPS vs NIDS / HIDS Notes
 
-IDS stands for Intrusion Detection System. It watches network or host activity and alerts when something looks suspicious.
-IPS stands for Intrusion Prevention System. It does the same but can block attacks in real time.
-NIDS is network based. It watches traffic across network segments.
-HIDS is host based. It runs on individual systems and monitors logs, processes, and file changes.
+## Anchor
+IDS stands for Intrusion Detection System. It observes network or host activity and generates alerts when behavior looks suspicious. IPS stands for Intrusion Prevention System. It inspects traffic inline and can block or drop malicious traffic in real time. NIDS refers to network based systems that monitor traffic on network links. HIDS refers to host based systems that run on individual machines and monitor logs, file integrity, and process activity.
 
-IDS is like a security camera that records what happens.
-IPS is like a security guard that steps in to stop trouble.
-NIDS gives a wide view of the network, while HIDS sees what happens inside each machine.
+A common deployment pattern is to mirror traffic from a switch to a NIDS sensor for passive analysis while placing an IPS inline at critical network choke points. Security Onion, Suricata, and Zeek are common tools for network detection. Wazuh and OSSEC are common host based options. A practical example is using Zeek on a network span port to create logs for connection activity while running Suricata in IPS mode on the outbound gateway to block known bad signatures.
 
-If an IPS blocks too aggressively it can interrupt normal work and cause downtime. False positives can make people stop trusting alerts.
+## Reverse
+If an IPS is configured too aggressively it can generate false positives that block legitimate traffic and disrupt operations. Detection systems that are too permissive will miss attacks. Host based systems provide deep local context but need maintenance on each machine. Network sensors provide broad visibility but lack host context. Tuning is required to reduce noise and avoid alert fatigue. Ensure logging is centralized, alerts are triaged, and blocking rules are tested in a staging environment before enabling them in production.

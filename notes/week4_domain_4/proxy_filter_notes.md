@@ -1,16 +1,9 @@
 # Proxy and Content Filter Notes
 
-A proxy sits between users and the internet. It checks traffic, filters it, and logs it.
-A forward proxy handles client requests going out to the internet.
-A reverse proxy protects servers by handling incoming requests.
-A transparent proxy intercepts traffic automatically without setup on each device.
+## Anchor
+A proxy server intermediates client requests to external services and can enforce policies, cache responses, and log traffic. Forward proxies handle outbound requests from clients to the internet. Reverse proxies sit in front of servers and handle incoming requests, offering load balancing, TLS termination, and request filtering. Transparent proxies intercept traffic without client configuration and are commonly used in corporate networks.
 
-The proxy is like a customs officer checking what enters or leaves a country.
+Common tools include Squid for HTTP proxying, NGINX or HAProxy for reverse proxy and load balancing, and cloud services that offer web filtering. An example deployment is a forward proxy that applies URL filtering and malware scanning for employee web traffic while a reverse proxy terminates TLS for public web services and forwards sanitized requests to application servers.
 
-Flow:
-1. A client sends a web request.
-2. The proxy receives it and checks the policy.
-3. It decides to allow, block, or modify the request.
-4. The decision is logged for review later.
-
-Proxies give control and visibility but can add delay or privacy issues if overused.
+## Reverse
+Proxies that perform deep inspection can introduce latency and raise privacy concerns when decrypting TLS traffic. Misconfigured proxies can leak headers or expose internal details. Transparent proxies can break applications that expect direct connections or rely on client IP addresses. Proxy policies must balance security, privacy, and performance. When implementing TLS inspection, protect the proxy platform, maintain certificate hygiene, and communicate changes to end users and stakeholders.
