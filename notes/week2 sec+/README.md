@@ -1,4 +1,4 @@
-# Week 2 — Firewalls / VPN / IDS & IPS
+# Week 2 - Firewalls / VPN / IDS & IPS
 
 ## Learning Objectives
 - Distinguish firewall types (stateless, stateful, WAF)  
