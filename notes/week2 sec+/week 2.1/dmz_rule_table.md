@@ -30,7 +30,7 @@ Keep rules **tight**, remove **any-any**.
 
 ---
 
-## Applied — Rule Table
+## Applied Rule Table
 
 | # | Direction | Source Zone | Destination Zone | Port | Action | Purpose |
 |---|------------|--------------|------------------|------|----------|----------|
