@@ -1,4 +1,4 @@
-# Domain 2.4 Notes — Common Vulnerabilities (Raw)
+# Domain 2.4 Notes / Common Vulnerabilities 
 
 misconfigurations -> default creds, open admin ports, public S3, overly-permissive IAM, insecure CORS
 - memory: "unlocked doors in digital houses"
