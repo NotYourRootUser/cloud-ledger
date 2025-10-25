@@ -1,58 +1,55 @@
-# Week 2.1 — Firewall & Network Flow Fixups
+# Week 2.1 / Firewall and Network Flow Review
 
 ## Overview
-This week I focused on tightening my understanding of how network traffic actually moves through each layer.  
-Instead of memorizing firewall rules, I wanted to see *why* something is allowed, blocked, or routed.  
-I rebuilt my Security+ notes, revisited AWS VPC traffic paths, and made sure every connection made logical sense.  
-The week finished with a **Defense-in-Depth × Zero-Trust** summary that stitched all the pieces together.
+This update tightened the technical flow from Week 2 and cleaned up how each firewall, proxy, and routing layer connects.  
+Instead of memorizing rules, I worked on seeing how every packet moves, what’s allowed, blocked, or redirected and why.  
+Each note and table in this folder was revised for clarity and structure so the entire network picture makes sense at a glance.
 
 ---
 
 ## Main Topics
-- **DMZ Rules** → How inbound and outbound traffic are split with dual firewalls.  
-- **ACL Order** → Top-to-bottom rule processing; first match always wins.  
-- **VPN (IKEv2)** → Phase 1 = auth, Phase 2 = data tunnel.  
-- **Security Groups vs NACLs** → SG = stateful, NACL = stateless.  
-- **VLAN + Subnetting** → How logical networks connect inside a VPC.  
-- **NAT vs IGW** → Why private subnets need NAT to reach the internet safely.  
-- **Load Balancers & Proxies** → Difference between L4 vs L7 balancing, forward vs reverse proxy.  
-- **Defense-in-Depth / Zero-Trust** → Final compression diagram tying every control layer together.
+- DMZ Rule Logic - mapping inbound and outbound paths across dual firewalls.  
+- ACL Order - understanding first-match behavior in real cases.  
+- VPN (IKEv2) - clarifying how Phase 1 handles authentication and Phase 2 encrypts data.  
+- Security Groups vs NACLs - comparing stateful and stateless behavior.  
+- VLAN + Subnetting - linking logical networks inside a VPC.  
+- NAT vs IGW - why private subnets rely on NAT for safe outbound access.  
+- Load Balancers & Proxies - visualizing L4 vs L7 differences and reverse proxy flow.  
+- Defense-in-Depth & Zero-Trust - refining the final compression diagram.
 
 ---
 
 ## Files in This Folder
 | File | Description |
 |------|--------------|
-| `dmz_rule_table.md` | Inbound/outbound firewall rule logic for DMZ placement. |
-| `firewall_pbq_fix.md` | Fixed PBQ error on rule order. |
-| `ikev2_notes.md` | Step-by-step of IKEv2 Phase 1 & 2. |
-| `ids_ips_waf_onepager.md` | One-pager comparing IDS / IPS / WAF. |
-| `nat_igw_chart.md` | NAT vs IGW side-by-side reference. |
-| `sg_vs_nacl_quick.md` | Quick recall for SG vs NACL. |
-| `vlan_subnet_matrix.md` | VLAN vs Subnet mapping + diagram. |
-| `lb_proxies.md` | Notes on L4/L7 load balancers and forward/reverse proxies. |
-| `defense_in_depth.md` | Compression artifact — full Defense-in-Depth × Zero-Trust model. |
+| `dmz_rule_table.md` | Updated inbound/outbound firewall rule logic. |
+| `firewall_pbq_fix.md` | Corrected PBQ example on rule order. |
+| `ikev2_notes.md` | Step-by-step of IKEv2 tunnel setup. |
+| `ids_ips_waf_onepager.md` | Comparison of IDS, IPS, and WAF functions. |
+| `nat_igw_chart.md` | NAT vs IGW quick reference. |
+| `sg_vs_nacl_quick.md` | Fast recall sheet for SG vs NACL behavior. |
+| `vlan_subnet_matrix.md` | VLAN/Subnet mapping with visual flow. |
+| `lb_proxies.md` | Short notes on load balancer and proxy roles. |
+| `defense_in_depth.md` | Updated compression artifact combining all layers. |
+| `utm_casb_overview.md` | Added summary of UTM and CASB integrations. |
+| `wireless_architecture.md` | Extended notes on wireless segmentation. |
 
 ---
 
-## What I Learned
-- Firewalls don’t just *block or allow* — **order matters** more than most people realize.  
-- A DMZ isn’t theory; it’s the real buffer zone that protects private networks.  
-- VPNs split their job cleanly: Phase 1 authenticates, Phase 2 encrypts.  
-- Once I drew the flows, the logic behind ACLs, LBs, and proxies finally clicked.  
-- Layered security isn’t overkill — it’s what keeps one mistake from collapsing the whole system.
+## What Changed
+- Reworked folder layout for faster lookup and file consistency.  
+- Cleaned heading formats and punctuation across all markdown files.  
+- Added wireless and UTM/CASB coverage to complete Domain 4.2 scope.  
+- Standardized anchor quotes and diagrams for future reuse.
 
 ---
 
 ## Anchor Quote
-> “Only Web ↔ DB; Internet → DMZ → DB.”  
-> Every connection should exist for a reason — no open paths without purpose.
+> “Every rule exists for a reason - if you can’t explain it, it doesn’t belong in the firewall.”
 
 ---
 
 ## Next Up
-- Keep practicing VPC builds that combine SG + NACL + route table logic.  
-- Simulate a full flow: **Internet → WAF → ALB → App → DB**, trace packets end to end.  
-- Start **Week 3 — Identity & Access Management (AAA / SSO / Federation)** to move from *verifying traffic* to *verifying identities*.
+- Continue to **Week 3 — Secure Network Management and Remote Access.**  
+- Apply the same clarity to configuration integrity, log pipelines, and RBAC automation.
 
----
