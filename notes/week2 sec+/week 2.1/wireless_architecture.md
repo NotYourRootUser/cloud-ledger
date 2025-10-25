@@ -1,4 +1,4 @@
-## Wireless Security Architecture — Notes
+## Wireless Security Architecture 
 
 - **WPA3** replaces WPA2-PSK with **SAE (Simultaneous Authentication of Equals)** to prevent offline brute-force attacks.  
 - **802.1X** enforces network access control; authentication runs through **EAP-TLS → RADIUS → AD/LDAP**.  
