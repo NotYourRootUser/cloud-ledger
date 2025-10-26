@@ -32,33 +32,13 @@ Flow before firewall. I draw traffic first and then add controls.
 
 ---
 
-## Labs and Projects
+## Labs
 
 Hands on practice where I link Security Plus topics to AWS.
 
 AWS and Security Plus labs are in the projects folder.
 
-[projects](./projects)
-
----
-
-## Quick Notes Index
-
-Topics I reference often:
-
-Threat actors notes  
-[domain 2.1](./week3%20sec+/domain_2.1)
-
-Attack surface and attack vectors  
-[domain 2.2](./week3%20sec+/domain_2.2)
-
-Indicators of compromise  
-[domain 2.3](./week3%20sec+/domain_2.3)
-
-Secure DNS and DNS filtering  
-[secure dns notes](./week4%20sec+/secure_dns_notes.md)
-
-This section will keep growing.
+[labs](./labs)
 
 ---
 
@@ -68,8 +48,7 @@ I use diagrams to understand network flow and controls.
 
 Examples can be found here:
 
-[Week 2 diagrams](./week2%20sec+/diagrams)  
-More diagrams inside other week folders
+[diagrams](./diagrams)  
 
 ---
 
