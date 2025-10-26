@@ -5,7 +5,7 @@ It includes what I did first, what was wrong, and what the correct reasoning loo
 
 ---
 
-## PBQ 1 – DMZ and Server Placement
+## PBQ 1 DMZ and Server Placement
 
 **Scenario:** Decide where to place web, mail, DNS, and database servers.
 
@@ -13,7 +13,7 @@ It includes what I did first, what was wrong, and what the correct reasoning loo
 `Internet → DNS → Edge Firewall → Web/Mail → Internal Firewall → LAN + DB`
 
 **What was wrong:**  
-I put DNS in front of the firewall. That exposes it directly to the internet — bad idea.
+I put DNS in front of the firewall. That exposes it directly to the internet = bad idea.
 
 **Correct layout:**  
 `Internet → Edge Firewall → [DMZ: Web / Mail / Public DNS] → Internal Firewall → [LAN: Internal DNS / Database]`
@@ -25,7 +25,7 @@ I put DNS in front of the firewall. That exposes it directly to the internet —
 
 ---
 
-## PBQ 2 – VPN Concentrator + IDS/IPS Placement
+## PBQ 2 / VPN Concentrator + IDS/IPS Placement
 
 **Scenario:** Combine remote-access VPN, DMZ, IDS, and IPS correctly.
 
@@ -48,7 +48,7 @@ Firewall filters → IDS watches → DMZ/VPN in parallel → Internal FW → IPS
 
 ---
 
-## PBQ 3 – VLAN Segmentation and Trunking
+## PBQ 3 / VLAN Segmentation and Trunking
 
 **Scenario:** Three departments and a shared printer. Need isolation and VLAN-hopping protection.
 
@@ -72,7 +72,7 @@ Routing happens on the router (“router-on-a-stick”).
 
 ---
 
-## PBQ 4 – ACL Rule Logic and Overlap
+## PBQ 4 / ACL Rule Logic and Overlap
 
 **Scenario:** Host 192.168.1.25 tries to SSH (port 22) through this rule set:
 
