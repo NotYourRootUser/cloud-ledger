@@ -5,9 +5,7 @@ Anchoring info
 ---
 
 ### Charter
-A formal document that grants the security team **authority**, **scope**, and an **executive sponsor** to enforce controls.  
-Analogy: a **badge + warrant** empowering security to act even when others resist.  
-Visual: a **sealed, signed authorization document**.
+A formal document that grants the security team **authority**, **scope**, and an **executive sponsor** to enforce controls. Kind of like a **badge + warrant** empowering security to act even when others resist. When i think of Charter i picture a **sealed, signed authorization document**.  
 
 ---
 
@@ -21,20 +19,16 @@ Clarifies who **does the work**, who **owns the outcome**, who **advises before*
 | Consulted | Expert input influencing action | Before | IAM specialist advising policy |
 | Informed | Updated on progress/outcomes | After | Stakeholders receiving incident reports |
 
-Memory: **Do • Own • Advise Before • Hear After**  
-Analogy: football: players (R), coach (A), assistants (C), audience (I)  
-Visual: a **4-column table** with names locked in each role
+**Do • Own • Advise Before • Hear After** like football: players (R), coach (A), assistants (C), audience (I). I picture it as a **4-column table** with names locked in each role
 
 ---
 
 ### Authority to Act
-The power for security to **enforce controls**, **halt risky actions**, and **escalate when needed**.  
-Analogy: a **referee whistle** that immediately stops the game.  
-Visual: a **red “SECURITY ONLY” door** with a keycard lock.
+The power for security to **enforce controls**, **halt risky actions**, and **escalate when needed,** like a **referee whistle** that immediately stops the game. I picture **red “SECURITY ONLY” door** with a keycard lock when I think of **authority to act.**
 
 ---
 
-### Governance Integration Summary
+### Governance Integration 
 
 | Control | Purpose | If Missing |
 |---------|---------|------------|
