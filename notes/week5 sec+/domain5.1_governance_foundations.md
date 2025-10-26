@@ -74,7 +74,9 @@ Advice without enforcement is ignored.
 ## eXploit / Escalation Flow
 
 **Diagram:**  
-![Escalation Flow](./domain5.1_escalation_flow_v1.png width="400px")
+<a href="./domain5.1_escalation_flow_v1.png" width="350">
+<img src=".domain5.1_escalation_flow_v1.png" width="350">
+</a>
 
 ### Flow summary
 Detector → Notifier → IR Lead → Decision (Escalate? Severity / Scope / Compliance) → External Reporting  
