@@ -75,7 +75,7 @@ Advice without enforcement is ignored.
 
 **Diagram:**  
 <a href="./domain5.1_escalation_flow_v1.png" width="350">
-<img src="./domain5.1_escalation_flow_v1.png" width="350">
+<img src="./domain5.1_escalation_flow_v1.png" width="500">
 </a>
 
 ### Flow summary
