@@ -30,4 +30,4 @@
 - gdb, Valgrind, AddressSanitizer.
 
 ## Analogy
-- Like overfilling a glass so it spills into the next one — overflow leaks into memory next door.
+- Like overfilling a glass so it spills into the next one, overflow leaks into memory next door.
