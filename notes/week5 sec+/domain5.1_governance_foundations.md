@@ -38,3 +38,32 @@ The power for security to **enforce controls**, **halt risky actions**, and **es
 
 Security governance requires **clarity + power**.  
 Advice without enforcement is ignored.
+
+---
+
+## Reverse // Insider Abuse and Governance Weak Points
+
+### Q1 - What if the Responsible actor intentionally executes the task incorrectly?
+
+*Impact:* Insider sabotage bypasses normal controls  
+*Governance Fix:* SoD, peer review, immutable logs, rapid escalation empowered by Authority to Act
+
+### Q2 - What if the person with Authority to Act accepts a bribe and deliberately sabotages enforcement?
+
+*Impact:* A compromised enforcer turns controls into attack vectors; malicious changes can be hidden and escalations blocked.  
+*Mitigations:* Dual-control for enforcement actions; independent oversight/internal audit; rotation and least-privilege for enforcement roles; regular attestation; tamper-evident external logs; anonymous whistleblower channel; periodic red-team integrity checks.
+
+### Q3 - What if a Consulted subject-matter expert intentionally feeds false or misleading information before execution to steer outcomes?
+
+*Impact:* Poisoned advice causes correct execution of incorrect plans, misconfigs, insecure workarounds, and deliberate failure modes.  
+*Mitigations:* Cross-check inputs with independent review; require evidence-based recommendations; record decision rationale; limit consult scope; consult multiple SMEs for high-risk changes; enforce automated policy-as-code guards; run post-change canary validations and telemetry checks.
+
+### Q4 - What if the person with Authority to Act instructs teams to ignore alerts?
+
+*Impact:* Detection becomes blind by instruction; malicious activity can persist without escalation, and trust in governance erodes.  
+*Mitigations:* Dual-approval for alert suppression; immutable alert streams to external SIEM; protected escalation path bypassing Authority; automated guardrails that still trigger response; audited suppression logs with oversight review.
+
+### Q5 - What if an Informed stakeholder attempts to direct actions or override decisions based on the updates they receive?
+
+*Impact:* Role boundaries collapse, decision-making authority shifts to someone without responsibility or expertise, causing misalignment, delays, or insecure outcomes.  
+*Mitigations:* Enforce RACI boundaries in policy; require escalation through the Accountable role; restrict decision controls to Authorized roles; maintain audit trails showing who attempted to influence actions and how governance responded.
