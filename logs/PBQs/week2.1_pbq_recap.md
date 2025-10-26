@@ -1,4 +1,4 @@
-# Security+ PBQ Set 2 – Recap and Corrections
+# Security+ PBQ Recap and Corrections
 
 This set covers the main network placement and logic questions that always show up on Security+.  
 It includes what I did first, what was wrong, and what the correct reasoning looks like.
