@@ -1,7 +1,5 @@
 ## Diagrams
 
-These are the main AWS architecture diagrams I have built so far. I keep them small here so the README is readable, and they expand when clicked.
-
 ### Bastion to private instance network flow
 <a href="./diagrams/aws/aws_vpc_bastion_web_private_flow.png">
 <img src="./diagrams/aws/aws_vpc_bastion_web_private_flow.png" width="350">
@@ -26,4 +24,3 @@ These are the main AWS architecture diagrams I have built so far. I keep them sm
 <a href="./diagrams/aws/aws_application_network_monitoring_layers.png">
 <img src="./diagrams/aws/aws_application_network_monitoring_layers.png" width="350">
 </a>
-
