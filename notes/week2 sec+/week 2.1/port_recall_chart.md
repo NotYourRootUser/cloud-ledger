@@ -1,4 +1,4 @@
-**Network** is secure building. Each port = a door with a label. TCP doors are locked until a connection handshake, UDP doors are flap doors — open briefly for quick exchanges.
+**Network** is secure building. Each port = a door with a label. TCP doors are locked until a connection handshake, UDP doors are flap doors open briefly for quick exchanges.
 
 - Port 22 → Secure staff door (SSH admin access).
 - Port 53 → Reception window (quick name lookups).

@@ -1,4 +1,4 @@
-# Firewall PBQ Fix — ACL Order + Subnet Scope
+# Firewall PBQ Fix / ACL Order + Subnet Scope
 
 **Problem:**  
 Users couldn’t access HTTPS due to mis-sequenced ACL; external users reached DMZ because the /8 subnet was too broad.

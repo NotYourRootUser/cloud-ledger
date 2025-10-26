@@ -1,11 +1,3 @@
-
-**Time:** 4:00–4:45 PM  
-**Goal:** Understand how Security Groups (SG) and Network ACLs (NACL) work together in AWS networking.  
-**Artifact:** `notes/sg_vs_nacl_quick.md`  
-**Mode:** Voice seeding for comprehension (not recall)
-
----
-
 ## Key Points
 
 - Security Groups are **instance-level** firewalls. They are **stateful**, meaning once traffic is allowed in, the response is automatically allowed back out.  
@@ -49,4 +41,4 @@ SG never sees the attempt because it’s stopped at the subnet edge.
 **Summary:**  
 > NACL checks first, SG checks second.  
 > Stateless perimeter first, stateful instance last.  
-> Fence then guard — macro to micro.
+> Fence then guard, macro to micro.

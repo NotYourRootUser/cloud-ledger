@@ -8,7 +8,7 @@ Once compromised, it’s a pivot point into internal systems.
 
 ## Segmentation Notes
 Keep IoT on its own VLAN or subnet.  
-Treat that space like a quarantine zone — talk only to what’s required.  
+Treat that space like a quarantine zone talk only to what’s required.  
 Use ACLs and firewall rules to stop traffic back into the corporate LAN.  
 Example: cameras → IoT VLAN → firewall → management zone → storage server.
 

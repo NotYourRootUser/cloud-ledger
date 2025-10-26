@@ -21,7 +21,7 @@
 | **Data**        | Encryption / DLP        | Protects data at rest and in transit                  | Encrypt everywhere · least access | KMS · Macie               |
 
 
-## 4) Adversarial Rep — Attack paths & Mitigations
+## 4) Adversarial Rep / Attack paths & Mitigations
 
 - **Exploit: Reverse proxy cache poisoning**
   - *What:* Attacker forces malicious or stale responses into reverse proxy cache, serving them to other users.

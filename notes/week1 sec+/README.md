@@ -1,4 +1,4 @@
-# Week 1 — Attacks & Vulnerabilities
+# Week 1 / Attacks & Vulnerabilities
 
 ## Quick Reference
 - **MITM:** Interception of communication (active = modification, passive = eavesdrop).  

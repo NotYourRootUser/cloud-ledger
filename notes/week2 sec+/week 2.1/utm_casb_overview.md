@@ -1,4 +1,4 @@
-# UTM & CASB — Short Notes
+# UTM & CASB / Short Notes
 
 **UTM (Unified Threat Management):**
 - All-in-one perimeter device (firewall, IDS/IPS, AV, VPN, content filter).  

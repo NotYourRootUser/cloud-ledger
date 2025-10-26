@@ -11,7 +11,7 @@
 - Evil Twin Wi-Fi → fake AP collects credentials.
 - HTTPS downgrade → strips or weakens TLS.
 
-## Mitigation (preventive — expanded)
+## Mitigation 
 - Use strong encryption (TLS/HTTPS, VPN).
 - Enforce HSTS and certificate pinning (clients + servers).
 - Secure Wi-Fi (WPA3, 802.1X Enterprise).

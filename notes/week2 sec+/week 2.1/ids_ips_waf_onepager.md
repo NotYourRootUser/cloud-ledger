@@ -1,4 +1,4 @@
-# IDS vs IPS vs WAF (Blue Team — Psychology Lens)
+# IDS vs IPS vs WAF 
 
 ## Summary
 - **IDS** = Detects suspicious traffic; out-of-band; generates alerts only.  
@@ -16,7 +16,7 @@
 
 ---
 
-## Scenario — HTTP POST Spike → 500 Errors
+## Scenario - HTTP POST Spike → 500 Errors
 - **Pattern:** Many large POST requests + 500 errors = input-based attack.  
 - **Step 1:** Check *Prevent* control → tune WAF rules / enable blocking.  
 - **Step 2:** If already blocking → verify *Detect* layer (IDS).  

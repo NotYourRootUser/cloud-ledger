@@ -37,4 +37,4 @@
 - sqlmap (scanner/exploit).
 
 ## Analogy
-- Like slipping extra instructions on a restaurant order — chef executes blindly unless menu IDs are enforced.
+- Like slipping extra instructions on a restaurant order, chef executes blindly unless menu IDs are enforced.
