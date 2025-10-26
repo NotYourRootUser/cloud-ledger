@@ -45,7 +45,7 @@ AWS and Security Plus labs are in the projects folder.
 ## Diagrams
 
 One of my main architecture diagrams.
-More diagrams are here: /diagrams
+More diagrams are here: [diagrams](./diagrams)
 
 ### Secure static website delivery and monitoring
 <img src="diagrams/aws/aws_cloudfront_waf_s3_monitoring.png" width="450">
