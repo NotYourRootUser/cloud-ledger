@@ -1,8 +1,9 @@
 # Domain 5.1 / Governance Foundations  
-Charter • RACI • Authority to Act  
-Anchoring info
+Charter • RACI • Authority to Act 
 
 ---
+
+## Anchor -
 
 ### Charter
 A formal document that grants the security team **authority**, **scope**, and an **executive sponsor** to enforce controls. Kind of like a **badge + warrant** empowering security to act even when others resist. When i think of Charter i picture a **sealed, signed authorization document**.  
@@ -67,3 +68,30 @@ Advice without enforcement is ignored.
 
 *Impact:* Role boundaries collapse, decision-making authority shifts to someone without responsibility or expertise, causing misalignment, delays, or insecure outcomes.  
 *Mitigations:* Enforce RACI boundaries in policy; require escalation through the Accountable role; restrict decision controls to Authorized roles; maintain audit trails showing who attempted to influence actions and how governance responded.
+
+---
+
+## eXploit / Escalation Flow
+
+**Diagram (exported PNG):**  
+![Escalation Flow](sandbox:/mnt/data/screenshot-2025-10-27_10-54-28.png)
+
+### Flow summary
+Detector → Notifier → IR Lead → Decision (Escalate? Severity / Scope / Compliance) → External Reporting  
+Dashed bypass: Whistleblow (anonymous/protected) → Compliance / Hotline (Protected Channel)
+
+### Evidence / SLA anchors
+- Detector → Notifier: **Alert ID + timestamp + log reference**
+- Notifier → IR Lead: **Ticket opened (ID) + triage notes (≤15m)**
+- IR Lead → Decision Authority: **Severity report + containment status (≤30m ack)**
+- Decision Authority → External Reporting: **Reg trigger? (72h breach reporting law)**
+- Whistleblow bypass note: **Protected channel — anonymity required by policy**
+
+### Mapping Questions
+1. **Where can alerts die without a ticket or acknowledgment?**  
+2. **Who can stall escalation by withholding severity or scope details?**
+
+### Compression Sentences
+3. **Delayed acknowledgment gives attackers quiet time to move laterally.**  
+4. **If the decision authority is compromised, escalation collapses without bypass protections.**
+
