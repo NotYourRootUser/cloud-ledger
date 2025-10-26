@@ -17,7 +17,7 @@ Key anchor line to repeat:
 
 ---
 
-### **3 Scenario (5:25–5:40) — Fix Two Broken ACLs**
+### **3 Scenario 
 
 **ACL A:**
 
