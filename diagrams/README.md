@@ -30,6 +30,6 @@ I put all diagrams here to keep the main README clean. Click any image to view f
 </a>
 
 ## Security+ diagrams
-a href="./domain5.1_escalation_flow_v1.png" width="350">
+<a href="./security/domain5.1_escalation_flow_v1.png" width="350">
 <img src="./security/domain5.1_escalation_flow_v1.png" width="350">
 </a>
