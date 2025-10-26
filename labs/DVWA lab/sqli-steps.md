@@ -1,0 +1,3 @@
+- Step 1 — Navigated to DVWA → SQL Injection.
+- Step 2 — Tried payload: 1' OR '1'='1' -- (syntax error).
+- Step 3 — Successful payload: 1' OR '1'='1' # ; observed DB output / all users returned.
