@@ -1,7 +1,7 @@
-# Week 1 — DVWA Lab: SQLi & XSS
+# Week 1 DVWA Lab: SQLi & XSS
 
 **What I did:**  
-Ran a small DVWA lab to test two common web bugs — **SQL Injection (SQLi)** and **Reflected XSS**.  
+Ran a small DVWA lab to test two common web bugs **SQL Injection (SQLi)** and **Reflected XSS**.  
 I did this to try and understand how these attacks work and how they look in action. Notes, steps, and screenshots are all in this repo.
 
 ## Setup
@@ -21,11 +21,11 @@ I did this to try and understand how these attacks work and how they look in act
 ---
 
 ## Files 
-- [DVWA-checklist.md](DVWA-checklist.md) — setup steps and quick checks.  
-- [sqli-steps.md](sqli-steps.md) — the SQLi payloads and what I tried.  
-- [xss-steps.md](xss-steps.md) — notes on the XSS test.  
-- [compression.md](compression.md) — short summary and how to fix it.  
+- [DVWA-checklist.md](DVWA-checklist.md) - setup steps and quick checks.  
+- [sqli-steps.md](sqli-steps.md) - the SQLi payloads and what I tried.  
+- [xss-steps.md](xss-steps.md) - notes on the XSS test.  
+- [compression.md](compression.md) - short summary and how to fix it.  
 
 ## Short takeaway and the next step
 Both bugs worked on **Low** security.  
-Next I’ll try adding simple fixes — **parameterized queries** for SQLi and **output encoding** for XSS — then re-test to see if they’re patched.
+Next I’ll try adding simple fixes - **parameterized queries** for SQLi and **output encoding** for XSS then re-test to see if they’re patched.
