@@ -39,4 +39,4 @@
 - Nessus (industry standard).
 
 ## Analogy
-- Like a medical checkup: finds symptoms but not the full disease — needs a specialist (pen tester) to confirm.
+- Like a medical checkup: finds symptoms but not the full disease, needs a specialist (pen tester) to confirm.
