@@ -1,6 +1,6 @@
-# Domain 5.1 — Governance Foundations  
+# Domain 5.1 / Governance Foundations  
 Charter • RACI • Authority to Act  
-Anchor Phase — ARX Aligned
+Anchoring info
 
 ---
 
@@ -22,7 +22,7 @@ Clarifies who **does the work**, who **owns the outcome**, who **advises before*
 | Informed | Updated on progress/outcomes | After | Stakeholders receiving incident reports |
 
 Memory: **Do • Own • Advise Before • Hear After**  
-Analogy: football — players (R), coach (A), assistants (C), audience (I)  
+Analogy: football: players (R), coach (A), assistants (C), audience (I)  
 Visual: a **4-column table** with names locked in each role
 
 ---
