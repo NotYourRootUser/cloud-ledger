@@ -51,4 +51,4 @@ Guideline (advice on the side)
 - Insiders can retain elevated access long after the need is gone.
 - Breach investigations stall because no one knows who approved what.
 
-<!-- These are failure modes when governance loses discipline -->
+.These are failure modes when governance loses discipline.
