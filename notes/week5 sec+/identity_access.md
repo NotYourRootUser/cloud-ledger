@@ -1,4 +1,4 @@
-# Identity and Access preload Anchor \
+# Identity and Access 
 
 ## Anchoring info 
 - Goal: map governance bullets into cloud controls so access is precise and reversible.
