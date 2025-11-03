@@ -10,21 +10,13 @@
 - If a device is outside trusted IPs and not MAM-compliant → restrict access, require step-up auth, log session.
 - If an MDM-enrolled device is lost → full wipe; if only MAM, selective wipe corporate container.
 
-## eXploit Diagram
-```mermaid
-flowchart LR
-  User(Device) -->|Sign-in| IdP[Identity Provider / Conditional Access]
-  IdP --> CheckDevice{Device Compliance?}
-  CheckDevice -->|MDM enrolled| AllowFull[Allow Full Access]
-  CheckDevice -->|MAM only| AllowApp[Allow App-Container Access]
-  IdP --> CheckNetwork{Source IP / VPN?}
-  CheckNetwork -->|Trusted IP/VPN| AllowFull
-  CheckNetwork -->|Untrusted| Conditional[Require MFA + Restrict (view-only)]
-  AllowFull --> AppAccess[Corporate Apps & Data]
-  AllowApp --> AppAccess
-  Conditional --> AppAccess
-  AppAccess --> Audit[Logging & DLP]
-```
+## Diagram
+
+Diagram: BYOD → MDM / MAM → Conditional Access flow.
+
+![BYOD Geofence Flow](byod_geofence_flow.png)
+*Figure: BYOD device path; MDM vs MAM split; Conditional Access checks device posture + network geofence; outcomes: Full vs Limited Access. Saved as `byod_geofence_flow.png`.*
+
 
 ## Quick policy example 
 Policy: FinanceCorp-Geofence
