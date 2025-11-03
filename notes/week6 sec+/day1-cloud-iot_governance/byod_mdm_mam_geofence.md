@@ -1,4 +1,4 @@
-# BYOD → MDM / MAM → Geofencing (ARX)
+# BYOD → MDM / MAM → Geofencing
 
 ## Anchor
 - BYOD: Bring Your Own Device — personal devices used for corporate access.
